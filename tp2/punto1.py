@@ -11,13 +11,13 @@ def esPalindromo(cadena):
     cadena_str = []
     for letra in cadena:
         cadena_str.append(letra)
-    es = True
+    palindromo = True
     i = 0
-    while len(cadena) != i and es:
-        if(cadena_str.pop() != cadena[i]):
-            es = False
+    while len(cadena) != i and palindromo:
+        if cadena_str.pop() != cadena[i]:
+            palindromo = False
         i += 1
-    if es:
+    if palindromo:
         print("Es palíndromo")
     else:
         print("No es palíndromo")
