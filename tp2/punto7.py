@@ -20,3 +20,5 @@ if nombre_producto in diccionario_productos['nombre']:
     print(f"El producto {nombre_producto} con código {codigo} vale ${precio}.")
 else:
     print(f"El producto {nombre_producto} no se encuentra registrado en el almacen.")
+    print("Los productos disponibles son:")
+    print(diccionario_productos['nombre'])
