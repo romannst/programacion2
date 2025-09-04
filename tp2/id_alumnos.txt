@@ -1,0 +1,7 @@
+12345;Perez;Juan
+23456;Gomez;Maria
+34567;Martinez;Luis
+45678;Lopez;Ana
+56789;Diaz;Pedro
+67890;Fernandez;Laura
+78901;Hernandez;Carlos
