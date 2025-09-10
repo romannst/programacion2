@@ -1,6 +1,4 @@
-# ruta = r"C:\Users\roman\programacion2\tp2\productos.txt"
 ruta_2 = r"C:\Users\roman\programacion2\tp2\stock.txt"
-# archivo_productos = open(ruta, "r")
 archivo_stock = open(ruta_2, "r")
 ruta_3 = r"C:\Users\roman\programacion2\tp2\compras.txt"
 archivo_compras = open(ruta_3, "w")
