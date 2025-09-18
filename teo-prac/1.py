@@ -128,3 +128,5 @@ FILE_PATH = r"c:\Programacion2\datos.txt"
 with open(FILE_PATH, "r") as file:
 	for line in file:
     		print(line)
+
+#validacion de strings: if type(nombre) == str and nombre.strip() != "" and nombre != None: ... else raise ValueError
