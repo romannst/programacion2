@@ -129,4 +129,5 @@ with open(FILE_PATH, "r") as file:
 	for line in file:
     		print(line)
 
-#validacion de strings: if type(nombre) == str and nombre.strip() != "" and nombre != None: ... else raise ValueError
+#validacion de strings 1: if type(nombre) == str and nombre.strip() != "" and nombre != None: ... else raise ValueError
+#validacion de strings 2: if not instance(nombre, str) or nombre.strip() == "": ... else raise TypeError
