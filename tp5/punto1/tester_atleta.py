@@ -15,7 +15,6 @@ class TesterAtleta:
                 atleta2.entrenar()
             else:
                 atleta2.descansar()
-
         if atleta1.mismaDestrezaQue(atleta2):
             print(f"Ambos atletas tienen la misma destreza.")
         else:
