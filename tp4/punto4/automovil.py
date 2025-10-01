@@ -3,57 +3,57 @@ import random
 class Automovil:
 
     def __init__(self, marca:str, modelo:str, anio:int, velocidadMaxima:float, velocidadActual:float):
-        self.marca = marca
-        self.modelo = modelo
-        self.anio = anio
-        self.velocidadMaxima = velocidadMaxima
-        self.velocidadActual = velocidadActual
+        self.__marca = marca
+        self.__modelo = modelo
+        self.__anio = anio
+        self.__velocidadMaxima = velocidadMaxima
+        self.__velocidadActual = velocidadActual
     #comandos
     def establecerMarca(self, marca:str):
-        self.marca = marca
+        self.__marca = marca
     def establecerModelo(self, modelo:str):
-        self.modelo = modelo
+        self.__modelo = modelo
     def establecerAnio(self, anio:int):
-        self.anio = anio
+        self.__anio = anio
     def establecerVelocidadMaxima(self, velocidadMaxima:float):
-        self.velocidadMaxima = velocidadMaxima
+        self.__velocidadMaxima = velocidadMaxima
     def establecerVelocidadActual(self, velocidadActual:float):
-        self.velocidadActual = velocidadActual
+        self.__velocidadActual = velocidadActual
     def acelerar(self, incrementoVelocidad:int):
         if incrementoVelocidad > 0:
-            if self.velocidadActual == self.velocidadMaxima or self.velocidadActual + incrementoVelocidad > self.velocidadMaxima:
-                self.velocidadActual = self.velocidadMaxima
-                print(f"El automóvil alcanzó su velocidad máxima, {self.velocidadMaxima} km/h.")
+            if self.__velocidadActual == self.__velocidadMaxima or self.__velocidadActual + incrementoVelocidad > self.__velocidadMaxima:
+                self.__velocidadActual = self.__velocidadMaxima
+                print(f"El automóvil alcanzó su velocidad máxima, {self.__velocidadMaxima} km/h.")
             else:
-                self.velocidadActual += incrementoVelocidad
+                self.__velocidadActual += incrementoVelocidad
         else:
             print("El incremento de velocidad debe ser positivo.")
     def desacelerar(self, decrementoVelocidad:int):
         if decrementoVelocidad > 0:
-            if self.velocidadActual == 0 or self.velocidadActual - decrementoVelocidad < 0:
-                self.velocidadActual = 0
-                print(f"El automóvil llegó a su velocidad mínima, {self.velocidadActual} km/h.")
+            if self.__velocidadActual == 0 or self.__velocidadActual - decrementoVelocidad < 0:
+                self.__velocidadActual = 0
+                print(f"El automóvil llegó a su velocidad mínima, {self.__velocidadActual} km/h.")
             else:
-                self.velocidadActual -= decrementoVelocidad
+                self.__velocidadActual -= decrementoVelocidad
         else:
             print("El decremento de velocidad debe ser positivo.")
     def frenarPorCompleto(self):
-        self.velocidadActual = 0
+        self.__velocidadActual = 0
         print("El automóvil se ha detenido por completo.")
     #consultas
     def obtenerMarca(self) -> str:
-        return self.marca
+        return self.__marca
     def obtenerModelo(self) -> str:
-        return self.modelo
+        return self.__modelo
     def obtenerAnio(self) -> int:
-        return self.anio
+        return self.__anio
     def obtenerVelocidadMaxima(self) -> float:
-        return self.velocidadMaxima
+        return self.__velocidadMaxima
     def obtenerVelocidadActual(self) -> float:
-        return self.velocidadActual
+        return self.__velocidadActual
     def calcularMinutosParaLlegar(self, distanciaKM:float) -> int:
-        if self.velocidadActual > 0:
-            minutos_para_llegar = int((distanciaKM / self.velocidadActual) * 60)
+        if self.__velocidadActual > 0:
+            minutos_para_llegar = int((distanciaKM / self.__velocidadActual) * 60)
             return minutos_para_llegar
         print("El auto está detenido y no se puede calcular el tiempo para llegar.")
         return 0

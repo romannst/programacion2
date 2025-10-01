@@ -4,66 +4,72 @@ class Fecha:
             raise TypeError("Día, mes y año deben ser enteros.")
         if dia < 1 or dia > 31 or mes < 1 or mes > 12 or anio < 1:
             raise ValueError("Día, mes o año fuera de rango.")
-        self.dia = dia
-        self.mes = mes
-        self.anio = anio
+        self.__dia = dia
+        self.__mes = mes
+        self.__anio = anio
     def establecerDia(self, dia:int):
-        self.dia = dia
+        self.__dia = dia
     def establecerMes(self, mes:int):
-        self.mes = mes
+        self.__mes = mes
     def establecerAnio(self, anio:int):
-        self.anio = anio
+        self.__anio = anio
     def obtenerDia(self)->int:
-        return self.dia
+        return self.__dia
     def obtenerMes(self)->int:
-        return self.mes
+        return self.__mes
     def obtenerAnio(self)->int:
-        return self.anio
+        return self.__anio
     def esAnterior(self, otraFecha:"Fecha")->bool:
-        if self.anio < otraFecha.obtenerAnio():
+        if not isinstance(otraFecha, Fecha):
+            raise TypeError("El parámetro debe ser una instancia de Fecha.")
+        if self.__anio < otraFecha.obtenerAnio():
             return True
-        if self.anio == otraFecha.obtenerAnio():
-            if self.mes < otraFecha.obtenerMes():
+        if self.__anio == otraFecha.obtenerAnio():
+            if self.__mes < otraFecha.obtenerMes():
                 return True
-            if self.mes == otraFecha.obtenerMes():
-                return self.dia < otraFecha.obtenerDia()
+            if self.__mes == otraFecha.obtenerMes():
+                return self.__dia < otraFecha.obtenerDia()
         return False
     def sumaDias(self, cantDias:int)->"Fecha":
-        if cantDias < 0:
+        if not isinstance(cantDias, int):
+            raise TypeError("La cantidad de días a sumar debe ser un entero.")
+        elif cantDias < 0:
             raise ValueError("La cantidad de días a sumar no puede ser negativa.")
-        match self.mes:
+        match self.__mes:
             case 1 | 3 | 5 | 7 | 8 | 10 | 12:
                 #enero, marzo, mayo, julio, agosto, octubre, diciembre 31 dias
-                if self.dia + cantDias > 31:
-                    self.dia = (self.dia + cantDias) - 31
-                    if self.mes == 12:
-                        self.mes = 1
-                        self.anio += 1
+                if self.__dia + cantDias > 31:
+                    self.__dia = (self.__dia + cantDias) - 31
+                    if self.__mes == 12:
+                        self.__mes = 1
+                        self.__anio += 1
                     else:
-                        self.mes += 1
+                        self.__mes += 1
                 else:
-                    self.dia += cantDias
+                    self.__dia += cantDias
             case 4 | 6 | 9 | 11:
                 #abril, junio, septiembre, noviembre 30 dias
-                if self.dia + cantDias > 30:
-                    self.dia = (self.dia + cantDias) - 30
-                    self.mes += 1
+                if self.__dia + cantDias > 30:
+                    self.__dia = (self.__dia + cantDias) - 30
+                    self.__mes += 1
                 else:
-                    self.dia += cantDias
+                    self.__dia += cantDias
             case 2:
                 #febrero 28 dias
-                if self.dia + cantDias > 28:
-                    self.dia = (self.dia + cantDias) - 28
-                    self.mes += 1
+                if self.__dia + cantDias > 28:
+                    self.__dia = (self.__dia + cantDias) - 28
+                    self.__mes += 1
                 else:
-                    self.dia += cantDias
+                    self.__dia += cantDias
             case _:
                 raise ValueError("Mes inválido")
         return self
     def diaSiguiente(self)->"Fecha":
         return self.sumaDias(1)
     def isIgualQue(self, otraFecha:"Fecha")->bool:
-        return self.dia == otraFecha.obtenerDia() and self.mes == otraFecha.obtenerMes() and self.anio == otraFecha.obtenerAnio()
+        if not isinstance(otraFecha, Fecha):
+            raise TypeError("El parámetro debe ser una instancia de Fecha.")
+        return self.__dia == otraFecha.obtenerDia() and self.__mes == otraFecha.obtenerMes() and self.__anio == otraFecha.obtenerAnio()
     def __str__(self) -> str:
-        fecha = f"{self.dia:02}/{self.mes:02}/{self.anio}"
+        fecha = f"{self.__dia:02}/{self.__mes:02}/{self.__anio}"
         return fecha

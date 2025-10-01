@@ -29,8 +29,12 @@ class Atleta:
     def obtenerDestreza(self)->int:
         return self.__destreza
     def mismaDestrezaQue(self, otro_atleta:"Atleta")->bool:
+        if not isinstance(otro_atleta, Atleta):
+            raise TypeError("El argumento debe ser una instancia de Atleta.")
         return self.__destreza == otro_atleta.obtenerDestreza()
     def mayorDestrezaQue(self, otro_atleta:"Atleta")->bool:
+        if not isinstance(otro_atleta, Atleta):
+            raise TypeError("El argumento debe ser una instancia de Atleta.")
         return self.__destreza > otro_atleta.obtenerDestreza()
     def __str__(self) -> str:
         return f"Atleta: {self.__nombre}, Energía: {self.__energia}, Destreza: {self.__destreza}"
