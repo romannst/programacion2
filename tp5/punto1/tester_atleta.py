@@ -6,7 +6,7 @@ class TesterAtleta:
     def run():
         atleta1 = Atleta("Juan")
         atleta2 = Atleta("Maria")
-        while atleta1.obtenerDestreza() < 3 and atleta2.obtenerDestreza() < 3:
+        while atleta1.obtenerDestreza() < random.randint(1, 10) and atleta2.obtenerDestreza() < random.randint(1, 10):
             if random.choice([True, False]):
                 atleta1.entrenar()
             else:
