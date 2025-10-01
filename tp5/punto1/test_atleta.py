@@ -1,7 +1,7 @@
 from atleta import Atleta
 import random
 
-class TesterAtleta:
+class TestAtleta:
     @staticmethod
     def run():
         atleta1 = Atleta("Juan")
@@ -25,4 +25,4 @@ class TesterAtleta:
         print(atleta1)
         print(atleta2)
 if __name__ == "__main__":
-    TesterAtleta.run()
+    TestAtleta.run()
