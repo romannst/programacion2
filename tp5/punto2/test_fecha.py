@@ -1,4 +1,6 @@
+#desde el archivo fecha.py importar la clase Fecha
 from fecha import Fecha
+#importar la libreria random
 import random
 
 class TestFecha:
