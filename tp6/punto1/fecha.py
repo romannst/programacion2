@@ -35,35 +35,40 @@ class Fecha:
             raise TypeError("La cantidad de días a sumar debe ser un entero.")
         elif cantDias < 0:
             raise ValueError("La cantidad de días a sumar no puede ser negativa.")
-        match self.__mes:
+        
+        # Copiar la fecha para no modificar el objeto original
+        nueva_fecha = Fecha(self.__dia, self.__mes, self.__anio)
+
+        match nueva_fecha.__mes:
             case 1 | 3 | 5 | 7 | 8 | 10 | 12:
                 #enero, marzo, mayo, julio, agosto, octubre, diciembre 31 dias
-                if self.__dia + cantDias > 31:
-                    self.__dia = (self.__dia + cantDias) - 31
-                    if self.__mes == 12:
-                        self.__mes = 1
-                        self.__anio += 1
+                if nueva_fecha.__dia + cantDias > 31:
+                    nueva_fecha.__dia = (nueva_fecha.__dia + cantDias) - 31
+                    if nueva_fecha.__mes == 12:
+                        nueva_fecha.__mes = 1
+                        nueva_fecha.__anio += 1
                     else:
-                        self.__mes += 1
+                        nueva_fecha.__mes += 1
                 else:
-                    self.__dia += cantDias
+                    nueva_fecha.__dia += cantDias
             case 4 | 6 | 9 | 11:
                 #abril, junio, septiembre, noviembre 30 dias
-                if self.__dia + cantDias > 30:
-                    self.__dia = (self.__dia + cantDias) - 30
-                    self.__mes += 1
+                if nueva_fecha.__dia + cantDias > 30:
+                    nueva_fecha.__dia = (nueva_fecha.__dia + cantDias) - 30
+                    nueva_fecha.__mes += 1
                 else:
-                    self.__dia += cantDias
+                    nueva_fecha.__dia += cantDias
             case 2:
                 #febrero 28 dias
-                if self.__dia + cantDias > 28:
-                    self.__dia = (self.__dia + cantDias) - 28
-                    self.__mes += 1
+                if nueva_fecha.__dia + cantDias > 28:
+                    nueva_fecha.__dia = (nueva_fecha.__dia + cantDias) - 28
+                    nueva_fecha.__mes += 1
                 else:
-                    self.__dia += cantDias
+                    nueva_fecha.__dia += cantDias
             case _:
                 raise ValueError("Mes inválido")
-        return Fecha(self.__dia, self.__mes, self.__anio)
+
+        return nueva_fecha
     def diaSiguiente(self)->"Fecha":
         return self.sumaDias(1)
     def isIgualQue(self, otraFecha:"Fecha")->bool:
