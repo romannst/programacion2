@@ -31,6 +31,7 @@ class Borde:
     def esIgualQue(self, borde:"Borde")->bool:
         if not isinstance(borde, Borde):
             raise ValueError("El borde debe ser una instancia de la clase Borde.")
-        return self.__grosor == borde.obtenerGrosor() and self.__color.esIgualQue(borde.obtenerColor())
+        return self.__grosor == borde.obtenerGrosor() and self.__color == borde.obtenerColor() #-> superficial
+    #self.__color.esIgualQue(borde.obtenerColor()) -> profundidad
     def __str__(self) -> str:
         return f"Borde(grosor={self.__grosor}, color={self.__color})"
