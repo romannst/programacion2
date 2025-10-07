@@ -1,5 +1,3 @@
-from disciplina import Disciplina
-
 class Participante:
     def __init__(self, nombre:str, edad:int, nacionalidad:str):
         if not isinstance(edad, int) or edad < 0:
@@ -35,7 +33,8 @@ class Participante:
         if len(self.__disciplinas) == 0:
             print(f"{self.__nombre} no está inscrito en ninguna disciplina.")
         return self.__disciplinas
-    def agregar_disciplina(self, disciplina:Disciplina):
+    def agregar_disciplina(self, disciplina="Disciplina"):
+        from disciplina import Disciplina
         if not isinstance(disciplina, Disciplina):
             raise ValueError("El objeto debe ser una instancia de la clase Disciplina.")
         if disciplina not in self.__disciplinas:
@@ -43,7 +42,8 @@ class Participante:
             disciplina.agregar_participante(self)
         else:
             print(f"{self.__nombre} ya está inscrito en la disciplina {disciplina.obtener_nombre()}.")
-    def eliminar_disciplina(self, disciplina:Disciplina):
+    def eliminar_disciplina(self, disciplina="Disciplina"):
+        from disciplina import Disciplina
         if not isinstance(disciplina, Disciplina):
             raise ValueError("El objeto debe ser una instancia de la clase Disciplina.")
         if disciplina in self.__disciplinas:
@@ -57,4 +57,4 @@ class Participante:
         else:
             print(f"Disciplinas de {self.__nombre}:")
             for disciplina in self.__disciplinas:
-                print(f"- {disciplina.nombre}: {disciplina.descripcion}")
+                print(f"- {disciplina.obtener_nombre()}: {disciplina.obtener_descripcion()}")

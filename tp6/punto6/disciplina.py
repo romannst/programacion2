@@ -1,5 +1,3 @@
-from participante import Participante
-
 class Disciplina:
     def __init__(self, nombre:str, descripcion:str):
         if not isinstance(nombre, str) or nombre.strip() == "":
@@ -26,11 +24,15 @@ class Disciplina:
         if len(self.__participantes) == 0:
             print(f"No hay participantes inscritos en la disciplina {self.__nombre}.")
         return self.__participantes
-    def agregar_participante(self, participante:Participante):
+    # participante.py
+    def agregar_participante(self, participante="Participante"):
+        from participante import Participante
         if not isinstance(participante, Participante):
             raise ValueError("El objeto debe ser una instancia de la clase Participante.")
         self.__participantes.append(participante)
-    def eliminar_participante(self, participante:Participante):
+    # participante.py
+    def eliminar_participante(self, participante="Participante"):
+        from participante import Participante
         if not isinstance(participante, Participante):
             raise ValueError("El objeto debe ser una instancia de la clase Participante.")
         if participante in self.__participantes:
