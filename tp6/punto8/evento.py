@@ -20,11 +20,9 @@ class Evento:
         if not isinstance(org, Organizador) or org is None:
             raise TypeError("org debe ser una instancia de Organizador")
         self.__organizador = org
-        org.asignarEvento(self)
     def agregarParticipante(self, p:Participante):
         if not isinstance(p, Participante) or p is None:
             raise TypeError("p debe ser una instancia de Participante")
         self.__participantes.append(p)
-        p.registrarseEvento(self)
     def __str__(self)->str:
-        return f"Evento: {self.__nombre}, Fecha: {self.__fecha}, Descripcion: {self.__descripcion}, Organizador: {self.__organizador}, Participantes: {len(self.__participantes)}"
+        return f"Evento: {self.__nombre}\n Fecha: {self.__fecha}\n Descripcion: {self.__descripcion}\n Organizador: {self.__organizador.obtenerNombre() if self.__organizador else 'No asignado'}\n Participantes: {len(self.__participantes)}"

@@ -1,5 +1,3 @@
-from evento import Evento
-
 class Participante:
     def __init__(self, nombre:str, correo_e:str, telefono:str):
         if not isinstance(nombre, str) or nombre.strip() == "":
@@ -11,11 +9,12 @@ class Participante:
         self.__nombre = nombre
         self.__correo_e = correo_e
         self.__telefono = telefono
-        self.__eventos = list()
-    def registrarseEvento(self, evento:Evento):
-        if not isinstance(evento, Evento) or evento is None:
-            raise TypeError("evento debe ser una instancia de Evento")
-        self.__eventos.append(evento)
-        evento.agregarParticipante(self)
+
+    def obtenerNombre(self)->str:
+        return self.__nombre
+    def obtenerCorreo(self)->str:
+        return self.__correo_e
+    def obtenerTelefono(self)->str:
+        return self.__telefono
     def __str__(self)->str:
-        return f"Participante: {self.__nombre}, Correo: {self.__correo_e}, Telefono: {self.__telefono}, Eventos: {len(self.__eventos)}"
+        return f"Participante: {self.__nombre}\n Correo: {self.__correo_e}\n Telefono: {self.__telefono}"
