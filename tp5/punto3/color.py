@@ -88,3 +88,8 @@ class Color:
         return color_clonado
     def __str__(self):
         return f"Color(R: {self.__rojo}, G: {self.__verde}, B: {self.__azul})"
+    
+    #4)c)
+    #color_1 = color_5.complemento()
+    #como el objeto color_1 ya tiene como referencia un estado interno como el de color_5 no cambian sus valores (distintas referencias) pero su referencia es otra nueva
+    #color_2 = color_5.clone()
