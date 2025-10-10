@@ -1,5 +1,4 @@
 from entrada import Entrada
-from atraccion import Atraccion
 
 class Visitante:
     def __init__(self, nombre:str, edad:int, estatura:float, correo_e:str):
