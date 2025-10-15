@@ -1,4 +1,7 @@
-from evento import Evento, Fecha, Organizador, Participante
+from evento import Evento
+from fecha import Fecha
+from organizador import Organizador
+from participante import Participante
 
 class TestEvento:
     @staticmethod
