@@ -1,0 +1,18 @@
+Ejercicio Integrador: Sistema de Gestión de Librería
+
+Una librería desea mantener información sobre los libros que tiene en stock y sus respectivos autores.
+
+Libros: Los libros tienen un título, un género literario, un año de publicación, una descripción y una cantidad de páginas. Cada libro tiene un número de ISBN único para identificarlo.
+
+Además, los libros pueden ser de dos tipos: físicos y digitales.
+Los libros físicos tienen una cantidad de stock disponible en la librería.
+Los libros digitales tienen una plataforma de lectura (por ejemplo, "Kindle", "Google Play Books") y un tamaño de archivo.
+
+Autores: Los autores tienen un nombre, una biografía y una lista de libros escritos por ellos. Cada autor está identificado por un código único. Los autores pueden ser de diferentes nacionalidades y tener diferentes géneros literarios preferidos.
+
+Tienda: La librería tiene un nombre, dirección y una lista de libros disponibles en stock. Además, la librería lleva un registro de las ventas realizadas, que incluyen la cantidad de libros vendidos, el precio de cada uno y la fecha de la venta.
+
+Tareas:
+Diagrama UML completo: Realiza un diagrama UML que represente las clases principales del sistema: Libro, Autor, Tienda, Venta. Muestra las relaciones entre las clases (por ejemplo, la relación entre Libro y Autor, la relación entre Tienda y Libro, etc.).
+
+Implementación en Python: Implementa las clases en Python siguiendo las especificaciones proporcionadas. Cada clase debe tener los atributos mencionados y los métodos necesarios para manejar la información de los libros, autores, ventas y tienda.

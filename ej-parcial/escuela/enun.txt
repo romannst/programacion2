@@ -1,0 +1,42 @@
+Ejercicio Integrador: Sistema de Gestión de Escuela
+
+Una escuela desea gestionar la información de los estudiantes, profesores, cursos y las clases que se imparten. Para ello, se requieren las siguientes clases y relaciones:
+
++-------------------+         +--------------------+         +-------------------+
+|     Estudiante    |         |      Profesor      |         |       Curso       |
++-------------------+         +--------------------+         +-------------------+
+| - id_estudiante   |<>-------| - id_profesor      |         | - codigo_curso    |
+| - nombre          |         | - nombre           |<>------>| - nombre          |
+| - fecha_nacimiento|         | - especialidad     |         | - profesor        |
+| - cursos_inscritos|         | - cursos_dictados  |         | - estudiantes     |
++-------------------+         +--------------------+         +-------------------+
+      |                          |                              |
+      |                          |                              |
+      |                          |                              |
+      |                          |                              |
+      v                          v                              v
++-------------------+         +--------------------+         +-------------------+
+|       Clase       |         |                    |         |                   |
++-------------------+         |                    |         |                   |
+| - fecha_hora      |         |                    |         |                   |
+| - curso           |<>-------|                    |         |                   |
+| - estudiantes_presentes|    |                    |         |                   |
++-------------------+         +--------------------+         +-------------------+
+
+Especificación:
+
+Estudiantes: Los estudiantes tienen un nombre, una fecha de nacimiento y una lista de cursos en los que están inscritos. Cada estudiante tiene un número de identificación único (id_estudiante).
+
+Profesores: Los profesores tienen un nombre, un número de identificación único (id_profesor) y una lista de cursos que dictan. Los profesores también tienen un campo para su especialidad (por ejemplo, Matemáticas, Historia, etc.).
+
+Cursos: Los cursos tienen un nombre, un código único (codigo_curso) y un profesor asignado. Los cursos también tienen una lista de estudiantes inscritos.
+
+Clases: Una clase se caracteriza por la fecha y hora en la que se imparte, el curso que se dicta y la lista de estudiantes presentes.
+
+Tareas:
+Implementación en Python: Implementa las clases según lo descrito en el diagrama UML. Cada clase debe tener los atributos y métodos mencionados.
+Clase Tester: Crea una clase de prueba (Tester) que:
+Crea instancias de Estudiante, Profesor, Curso y Clase.
+Asigne cursos a los estudiantes y profesores.
+Registre asistencia en las clases.
+Imprima información de estudiantes, profesores, cursos y clases utilizando los métodos informacion().
