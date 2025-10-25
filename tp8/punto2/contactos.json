@@ -1,0 +1,58 @@
+[
+    {
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "telefono": "123456789",
+        "correo_e": "juan.perez@example.com",
+        "direccion": "Calle Falsa 123"
+    },
+    {
+        "nombre": "Maria",
+        "apellido": "Gomez",
+        "telefono": "987654321",
+        "correo_e": "maria.gomez@example.com",
+        "direccion": "Avenida Siempre Viva 742"
+    },
+    {
+        "nombre": "Luis",
+        "apellido": "Martinez",
+        "telefono": "456789123",
+        "correo_e": "luis.martinez@example.com",
+        "direccion": "Boulevard de los Sueños Rotos 456"
+    },
+    {
+        "nombre": "Ana",
+        "apellido": "Lopez",
+        "telefono": "321654987",
+        "correo_e": "ana.lopez@example.com",
+        "direccion": "Calle de la Amargura 321"
+    },
+    {
+        "nombre": "Carlos",
+        "apellido": "Sanchez",
+        "telefono": "654321789",
+        "correo_e": "carlos.sanchez@example.com",
+        "direccion": "Avenida de la Paz 123"
+    },
+    {
+        "nombre": "Laura",
+        "apellido": "Ramirez",
+        "telefono": "789123456",
+        "correo_e": "laura.ramirez@example.com",
+        "direccion": "Calle de la Ilusión 789"
+    },
+    {
+        "nombre": "Pedro",
+        "apellido": "Martinez",
+        "telefono": "159753486",
+        "correo_e": "pedro.martinez@example.com",
+        "direccion": "Calle de la Amargura 123"
+    },
+    {
+        "nombre": "Sofia",
+        "apellido": "Martinez",
+        "telefono": "753159486",
+        "correo_e": "sofia.martinez@example.com",
+        "direccion": "Calle de la Ilusión 123"
+    }
+]
