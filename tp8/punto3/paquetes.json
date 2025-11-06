@@ -1,0 +1,83 @@
+[
+    {
+        "numero": 1,
+        "ciudad": {
+            "nombre": "Buenos Aires",
+            "provincia": "Buenos Aires",
+            "puntos_turisticos": "Obelisco, Casa Rosada"
+        },
+        "hotel": {
+            "nombre": "Hotel Central",
+            "ciudad": {
+                "nombre": "Buenos Aires",
+                "provincia": "Buenos Aires",
+                "puntos_turisticos": "Obelisco, Casa Rosada"
+            },
+            "descr": "Hotel en el centro de la ciudad",
+            "estrellas": 4,
+            "pension": "MEDIA_PENSION"
+        },
+        "fecha_ida": "2024-12-01",
+        "fecha_vuelta": "2024-12-10",
+        "descr": "Paquete turistico a Buenos Aires",
+        "viaje": "TURISMO",
+        "transporte": "AVION",
+        "precio": 1500.0,
+        "cupo_actual": 10,
+        "cupo_max": 20
+    },
+    {
+        "numero": 2,
+        "ciudad": {
+            "nombre": "Cordoba",
+            "provincia": "Cordoba",
+            "puntos_turisticos": "Catedral, Parque Sarmiento"
+        },
+        "hotel": {
+            "nombre": "Hotel Cordoba",
+            "ciudad": {
+                "nombre": "Cordoba",
+                "provincia": "Cordoba",
+                "puntos_turisticos": "Catedral, Parque Sarmiento"
+            },
+            "descr": "Hotel en el centro de Cordoba",
+            "estrellas": 3,
+            "pension": "PENSION_COMPLETA"
+        },
+        "fecha_ida": "2024-11-15",
+        "fecha_vuelta": "2024-11-25",
+        "descr": "Paquete turistico a Cordoba",
+        "viaje": "AVENTURA",
+        "transporte": "COLECTIVO",
+        "precio": 1200.0,
+        "cupo_actual": 5,
+        "cupo_max": 15
+    },
+    {
+        "numero": 3,
+        "ciudad": {
+            "nombre": "Mendoza",
+            "provincia": "Mendoza",
+            "puntos_turisticos": "Parque General San Martin, Bodega Catena Zapata"
+        },
+        "hotel": {
+            "nombre": "Hotel Mendoza",
+            "ciudad": {
+                "nombre": "Mendoza",
+                "provincia": "Mendoza",
+                "puntos_turisticos": "Parque General San Martin, Bodega Catena Zapata"
+            },
+            "descr": "Hotel en el centro de Mendoza",
+            "estrellas": 5,
+            "pension": "PENSION_COMPLETA"
+        },
+        "fecha_ida": "2024-10-05",
+        "fecha_vuelta": "2024-10-15",
+        "descr": "Paquete turistico a Mendoza",
+        "viaje": "TURISMO",
+        "transporte": "COLECTIVO",
+        "precio": 2000.0,
+        "cupo_actual": 8,
+        "cupo_max": 12
+    }
+]
